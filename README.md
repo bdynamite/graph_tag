@@ -50,7 +50,7 @@ $ flask run
 
 Python console
 >>> import requests
->>> r = requests.get('http://127.0.0.1:5000/api/v1/graph_by_tag', json={'tags': ["'mask_11'", "'ev_11'"]})
+>>> r = requests.get('http://127.0.0.1:5000/api/v1/graph_by_tag', json={'tags': ['mask_11', 'ev_11']})
 >>> len(r.json()), r.json()
 235, ['G100001', 'G100005', 'G100006', 'G100009', 'G100012', ... , 'G100998']
 
