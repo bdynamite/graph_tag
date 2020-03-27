@@ -4,7 +4,7 @@ from . import bp, errors
 
 
 def cache_key():
-    tags = list(set(request.json.get('tags')))
+    tags = list(set(request.json.get('tags', [])))
     tags.sort()
     key = '{0}{1}'.format(request.path, tags)
     return key
@@ -13,7 +13,7 @@ def cache_key():
 @bp.route('/graph_by_tag', methods=['GET'])
 @cache.cached(key_prefix=cache_key)
 def graph_by_tag():
-    tags = set(request.json.get('tags'))
+    tags = set(request.json.get('tags', []))
     if not tags:
         raise errors.ApiError(
             message='no tags passed'
