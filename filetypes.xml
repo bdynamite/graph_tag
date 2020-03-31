@@ -11,6 +11,7 @@
       <mapping pattern="bug" type="PLAIN_TEXT" />
       <mapping pattern="hlp" type="PLAIN_TEXT" />
       <mapping pattern="1" type="PLAIN_TEXT" />
+      <mapping ext="go" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
